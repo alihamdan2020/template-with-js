@@ -103,10 +103,9 @@ body {
 
 /* start landing section */
 .landing {
-  background-image: url(../images/01.jpg), rgba(0, 0, 0, 0.2);
+  background: url(../images/01.jpg);
   background-size: cover;
   min-height: 100vh;
-  background-blend-mode: overlay;
   /*code above about blend mode used insted of create overlay div*/
   transition: background-image 1s;
   /* we change background by js, so we need smoth movement during chnanging, we write transition into landing div */

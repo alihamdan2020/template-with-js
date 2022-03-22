@@ -22,7 +22,7 @@ setInterval(() => {
   let random_value = Math.floor(Math.random() * array_picture.length);
   landing.style.backgroundImage = 'url(images/' + array_picture[random_value] + ')';
   //console.log(random_value);
-}, 2000);
+}, 3000);
 
 
 
