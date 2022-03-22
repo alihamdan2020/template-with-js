@@ -1,0 +1,246 @@
+/* global variables */
+:root {
+  --main-color: darkorange;
+}
+
+/*end*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "work Sans", sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* setting box */
+.setting-box {
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  left: -250px;
+  top: 0px;
+  position: fixed;
+  transition: 1.4s;
+
+}
+
+.setting-box .gear-container {
+  padding: 10px;
+  position: absolute;
+  right: -44px;
+  top: 150px;
+  background-color: var(--main-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.open {
+  left: 0px
+}
+
+.setting-box .colors h3 {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 25px;
+  padding-top: 25px;
+  color: #e6e6e6;
+  margin-bottom: 25px;
+}
+
+.setting-box .colors ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setting-box .colors ul li {
+  width: 35px;
+  height: 35px;
+  list-style-type: none;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.setting-box .colors ul li:first-child {
+  background-color: darkorange;
+}
+
+.setting-box .colors ul li:nth-child(2) {
+  background-color: salmon;
+}
+
+.setting-box .colors ul li:nth-child(3) {
+  background-color: teal;
+}
+
+.setting-box .colors ul li:nth-child(4) {
+  background-color: aqua
+}
+
+.setting-box .colors ul li:last-child {
+  background-color: silver;
+}
+
+/* end setting box */
+
+
+/* start landing section */
+.landing {
+  background-image: url(../images/01.jpg), rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  min-height: 100vh;
+  background-blend-mode: overlay;
+  /*code above about blend mode used insted of create overlay div*/
+  transition: background-image 1s;
+  /* we change background by js, so we need smoth movement during chnanging, we write transition into landing div */
+}
+
+
+.landing .setting-box i {
+  color: white;
+  padding: 8px;
+  position: absolute;
+  right: -40px;
+  top: 10px;
+  font-size: 24px;
+
+
+}
+
+.landing .setting-box:hover {
+  left: 0px
+}
+
+.header {
+  display: flex;
+  padding: 20px 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+}
+
+.header .logo {
+  width: 300px;
+  text-align: center;
+}
+
+.header .logo a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.header .logo a span {
+  color: var(--main-color);
+}
+
+.header ul {
+  display: flex;
+  padding-right: 20px;
+  list-style-type: none;
+  border: 0px solid green;
+}
+
+@media (max-width: 768px) {
+  .header ul {
+    padding-right: 0px;
+  }
+}
+
+
+.header ul li {
+  margin-left: 25px;
+}
+
+.header ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+  text-transform: capitalize;
+  padding: 20px;
+}
+
+.header a:hover,
+.header a.active {
+  color: var(--main-color);
+}
+
+.landing-text {
+  color: white;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transition: 3.4s;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/* class below used in js file to apply when document is loaded to show landing text in fade in andfrom bottom to up */
+.showLanding {
+  top: 50%;
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .landing-text {
+    width: 100%;
+    padding: 0px 10px
+  }
+}
+
+.landing-text .title {
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.landing-text .title span {
+  color: var(--main-color);
+}
+
+.landing-text p {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/*media query*/
+
+/*small screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*big screen*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
