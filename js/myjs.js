@@ -144,7 +144,7 @@ productTitle.appendChild(productTitleText);
 
 //create image of proucts
 let productImage = document.createElement("img");
-productImage.setAttribute("src","../images/" + fullArray[k]["img"]);
+productImage.setAttribute("src","images/" + fullArray[k]["img"]);
 productImage.setAttribute("class","prod_img");
 
 
