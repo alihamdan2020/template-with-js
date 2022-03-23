@@ -110,3 +110,54 @@ newArray.forEach(function(li){
 //   document.documentElement.style.setProperty("--main-color",colorMain);
 //  }
  
+// assume array below a response from server
+
+let fullArray =[
+  {
+  "productName":"pepsi",
+  "productPrice":"20$",	
+  "img":"1.jpg"
+  },
+  {
+    "productName":"cocacola",
+  "productPrice":"10$",
+  "img":"2.jpg"
+  },
+  {
+  "productName":"kitkat",
+  "productPrice":"15$",
+  "img":"3.jpg"
+  }];
+
+  
+for(let k=0;k<3;k++)
+{
+  // create div that hold the product card
+let productDiv=document.createElement("div");
+productDiv.className="product_card";
+
+//create heading to hold prouct name
+let productTitle=document.createElement("h3");
+productTitle.setAttribute("class","prod_title");
+productTitleText=document.createTextNode(fullArray[k]["productName"]);
+productTitle.appendChild(productTitleText);
+
+//create image of proucts
+let productImage = document.createElement("img");
+productImage.setAttribute("src","../images/" + fullArray[k]["img"]);
+productImage.setAttribute("class","prod_img");
+
+
+// create span that holds price
+let productPrice=document.createElement("span");
+productPrice.setAttribute("class","prod_price");
+productPriceText=document.createTextNode(fullArray[k]["productPrice"]);
+productPrice.appendChild(productPriceText);
+
+productDiv.appendChild(productTitle);
+productDiv.appendChild(productImage);
+productDiv.appendChild(productPrice);
+
+let test=document.getElementById("container-products");
+test.appendChild(productDiv);
+}
