@@ -1,7 +1,7 @@
 /* global variables */
 :root {
   --main-color: darkorange;
-  --padding:120px;
+  --padding:100px;
 }
 
 /*end*/
@@ -25,6 +25,49 @@ body {
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+/* heaing above each block */
+.design{
+  text-transform: uppercase;
+  text-align:center;
+  border:5px solid black;
+  padding: 15px 30px;
+  margin:25px auto 50px auto;
+  transition: 0.3s;
+  font-weight: 900;
+  position:relative;
+  width:300px
+}
+
+@media (max-width:767px) {
+  .design{
+    padding: 0;
+    width:50vw
+  }
+}
+.design:after,
+.design:before
+{
+  position:absolute;
+  content: "";
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  top:50%;
+  transform: translateY(-50%);
+  background-color: black;
+}
+.design:after{
+left:-40px;
+}
+.design:before{
+  right:-40px;
+  }
+
+.design:hover{
+  background-color: black;
+  color:white;
 }
 
 /* setting box */
@@ -108,7 +151,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   /*code above about blend mode used insted of create overlay div*/
-  transition: background-image 1s;
+  transition: background-image 0.5s;
   /* we change background by js, so we need smoth movement during chnanging, we write transition into landing div */
 }
 
@@ -243,11 +286,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .product_card{
-  border:0px solid green;
+  border:1px solid green;
   padding: 20px;
   box-shadow: 0px 1px 5px black;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .prod_title{
@@ -271,6 +316,81 @@ body {
   display: block;
 }
 /* end product section */
+
+/* start section ofteams */
+.teams{
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  background-color: brown;
+}
+.teams .main-team-container{
+  border: 0px solid orange;
+  position:relative;
+}
+
+.teams .main-team-container i{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  color:var(--main-color);
+  font-size: 32px;
+  cursor: pointer;
+}
+.teams .main-team-container .fa-arrow-right{
+  right:0px;
+}
+
+.teams .main-team-container .fa-arrow-left{
+  left:0px;
+}
+#member{
+   margin-left: 0;
+}
+.teams .team-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  border: 0px solid green;
+  width:995px;
+  margin:auto;
+  position: relative;
+  height:350px
+}
+
+
+.teams .team-container .member{
+  padding: 18px;
+  border: 2px solid var(--main-color);
+  margin: 0px 5px;
+  height:350px
+}
+
+.member img{
+  z-index: 1;
+  position: relative;
+  transition: 0.5s;
+}
+
+.memberInfo{
+  position:relative;
+  top:-120px;
+  background-color:var(--main-color);
+  color:#e6e6e6;
+  transition: 1.5s;
+  padding: 10px 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.member img:hover + .memberInfo{
+  top:0px
+}
+.member img:hover{
+  transform: rotate(360deg);
+}
+/* end section of teams */
+
+
 
 /*small screen*/
 @media (min-width: 768px) {

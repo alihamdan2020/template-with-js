@@ -8,20 +8,26 @@ document.documentElement.style.setProperty("--main-color",localStorage.getItem("
 // this is new declaration in javascript er6
 let landing = document.querySelector(".landing");
 
-let array_picture = ["01.jpg", "02.jpg", "03.jpg","04.jpg","05.jpg"];
 
-// to create a random variable between 0 and 3 (the length of array)
 
 
 
 // in old version of js we wrote function as
 //setInervat(function() {..........}
 
+let array_picture = ["01.jpg", "02.jpg", "03.jpg","04.jpg","05.jpg"];
 
+// to create a random variable between 0 and 3 (the length of array)
+let test_counter=0;
 setInterval(() => {
-  let random_value = Math.floor(Math.random() * array_picture.length);
-  landing.style.backgroundImage = 'url(images/' + array_picture[random_value] + ')';
-  //console.log(random_value);
+  landing.style.backgroundImage = 'url(images/' + array_picture[test_counter] + ')';
+  test_counter++;
+
+  if (test_counter%5==0){
+    
+    test_counter=0;
+  }
+  console.log(test_counter);
 }, 3000);
 
 
@@ -114,23 +120,48 @@ newArray.forEach(function(li){
 
 let fullArray =[
   {
-  "productName":"pepsi",
-  "productPrice":"20$",	
+    "projectName":"project 1",
+    "projectWeb":"https://alihamdan2020.github.io/Kasper-Template",	
+    "img":"1.jpg"
+    },
+    {
+      "projectName":"project 1",
+      "projectWeb":"https://alihamdan2020.github.io/Kasper-Template",	
+      "img":"1.jpg"
+      },
+      {
+        "projectName":"project 1",
+        "projectWeb":"https://alihamdan2020.github.io/Kasper-Template",	
+        "img":"1.jpg"
+        },
+  {
+  "projectName":"project 1",
+  "projectWeb":"https://alihamdan2020.github.io/Kasper-Template",	
   "img":"1.jpg"
   },
   {
-    "productName":"cocacola",
-  "productPrice":"10$",
+  "projectName":"project 2",
+  "projectWeb":"https://alihamdan2020.github.io/Leon-Template/",
   "img":"2.jpg"
   },
   {
-  "productName":"kitkat",
-  "productPrice":"15$",
+  "projectName":"project 3",
+  "projectWeb":"https://alihamdan2020.github.io/Hamdan/",
   "img":"3.jpg"
-  }];
+  },
+  {
+    "projectName":"project 2",
+    "projectWeb":"https://alihamdan2020.github.io/Leon-Template/",
+    "img":"2.jpg"
+    },
+    {
+      "projectName":"project 2",
+      "projectWeb":"https://alihamdan2020.github.io/Leon-Template/",
+      "img":"2.jpg"
+      }];
 
   
-for(let k=0;k<3;k++)
+for(let k=0;k<fullArray.length;k++)
 {
   // create div that hold the product card
 let productDiv=document.createElement("div");
@@ -139,7 +170,7 @@ productDiv.className="product_card";
 //create heading to hold prouct name
 let productTitle=document.createElement("h3");
 productTitle.setAttribute("class","prod_title");
-productTitleText=document.createTextNode(fullArray[k]["productName"]);
+productTitleText=document.createTextNode(fullArray[k]["projectName"]);
 productTitle.appendChild(productTitleText);
 
 //create image of proucts
@@ -148,10 +179,12 @@ productImage.setAttribute("src","images/" + fullArray[k]["img"]);
 productImage.setAttribute("class","prod_img");
 
 
-// create span that holds price
-let productPrice=document.createElement("span");
+// create link that holds url
+let productPrice=document.createElement("a");
 productPrice.setAttribute("class","prod_price");
-productPriceText=document.createTextNode(fullArray[k]["productPrice"]);
+productPrice.setAttribute("target","_blank");
+productPrice.setAttribute("href",fullArray[k]["projectWeb"]);
+productPriceText=document.createTextNode("click the web");
 productPrice.appendChild(productPriceText);
 
 productDiv.appendChild(productTitle);
@@ -161,3 +194,20 @@ productDiv.appendChild(productPrice);
 let test=document.getElementById("container-products");
 test.appendChild(productDiv);
 }
+
+//move the images of teams
+let left_arrow=document.getElementById("left-arr");
+let right_arrow=document.getElementById("right-arr");
+let team_container=document.getElementById("team-container");
+let member=document.getElementById("member");
+
+left_arrow.onclick=function() {
+ member.style.marginLeft="-995px";
+ member.style.transition="2s";
+};
+
+right_arrow.onclick=function() {
+  member.style.marginLeft="0px";
+
+};
+
