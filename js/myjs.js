@@ -89,23 +89,23 @@ function jmjm() {
 
 
 
-// as mouse hover in CSS; just to apply new class
-let ulMenue = document.getElementsByClassName("main-menue-link");
-let arrayUlMenue = Array.from(ulMenue);
-arrayUlMenue.forEach(function (a) {
+//active link by hover mouse
+let menuLink = document.querySelectorAll(".main-menue-link");
 
-  a.addEventListener("mouseover", function () {
 
-    let activeLi = document.getElementsByClassName("active");
-    activeLi[0].classList.remove("active");
-    this.classList.add("active");
+menuLink.forEach(function(a){
 
-    // document.styleSheets[1].cssRules[33].style.removeProperty("left");
-    // document.styleSheets[1].cssRules[33].style.setProperty("left","0px");
+a.addEventListener("mouseenter",function(){
+ 
+  menuLink.forEach(function(a){
+    a.classList.remove("active");
+  });
 
-  })
-
+  this.classList.add("active");
 })
+});
+
+
 
 
 
