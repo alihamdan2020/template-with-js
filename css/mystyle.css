@@ -180,7 +180,11 @@ padding-bottom: 10px;
 .setting-box .colors ul li:last-child {
   background-color: silver;
 }
-
+@media (max-width:768px){
+  .setting-box{
+    opacity: 0;
+  }
+}
 /* end setting box */
 
 /* start button to up section */
