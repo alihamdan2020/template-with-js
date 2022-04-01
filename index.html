@@ -22,7 +22,7 @@
         <div class="gear-container">
             <i class="fas fa-cog"></i>
         </div>
-        <div class="colors">
+        <div class="settings-div colors">
             <h3 class="colors-title">Colors</h3>
             <ul id="ul-colors">
                 <li class="link-color" data-color="rgb(255,140,0)"></li>
@@ -32,17 +32,27 @@
                 <li class="link-color" data-color="rgb(192,192,192)"></li>
             </ul>
         </div>
+        <div class="settings-div background-option">
+            <h3>change Background</h3>
+            <span class="choose-background active" data-background="yes">yes</span>
+            <span class="choose-background" data-background="no">no</span>
+        </div>
+    </div>
+
+    <div class="button-to-up" id="btnToUp">
+        <i class="fas fa-sort-up"></i>
     </div>
 
     <div class="landing">
         <div class="container">
             <div class="header">
                 <h3 class="logo"><a href="#">We <span>create</span></a></h3>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#products">Projects</a></li>
-                    <li><a href="#teams">Our Team</a></li>
-                    <li><a href="#">Contact US</a></li>
+                <i id="burger" class="fas fa-bars"></i>
+                <ul class="main-menue">
+                    <li><a href="#" class="main-menue-link active">Home</a></li>
+                    <li><a href="#products" class="main-menue-link">Projects</a></li>
+                    <li><a href="#teams" class="main-menue-link">Our Team</a></li>
+                    <li><a href="#statistics" class="main-menue-link">Statistics</a></li>
                 </ul>
             </div>
             <div class="landing-text" id="landing-text">
@@ -57,43 +67,35 @@
     <div class="products" id="products">
         <h3 class="new-arrivals design">our project</h3>
         <div class="container" id="container-products">
-
-
         </div>
-
     </div>
 
 
     <div class="teams" id="teams">
         <div class="container">
-
-            <h3 class="our-team design">Meet Our team</h3>
-
-            <div class="main-team-container">
+            <h3 class="our-team">Meet Our team</h3>
+            <div class="main-team-container" id="main-team-container">
                 <i class="fas fa-arrow-left" id="left-arr"></i>
                 <i class="fas fa-arrow-right" id="right-arr"></i>
                 <div class="team-container" id="team-container">
 
                     <div class="member" id="member">
-                        <img src="images/avatar-01.png" alt="">
-                        <div class="memberInfo">
-                            <h3 class="memeberName">John Doe</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
-                        </div>
-                        
-                    </div>
-
-                    <div class="member">
-                        <img src="images/avatar-02.png" alt="">
+                        <img src="images/avatar-01.png" alt="" class="imgTeam">
                         <div class="memberInfo">
                             <h3 class="memeberName">John Doe</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
                         </div>
                     </div>
 
-
                     <div class="member">
-                        <img src="images/avatar-03.png" alt="">
+                        <img src="images/avatar-02.png" alt="" class="imgTeam">
+                        <div class="memberInfo">
+                            <h3 class="memeberName">John Doe</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="images/avatar-03.png" alt="" class="imgTeam">
                         <div class="memberInfo">
                             <h3 class="memeberName">John Doe</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
@@ -102,25 +104,7 @@
 
 
                     <div class="member">
-                        <img src="images/avatar-04.png" alt="">
-                        <div class="memberInfo">
-                            <h3 class="memeberName">John Doe</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
-                        </div>
-                    </div>
-
-
-                    <div class="member">
-                        <img src="images/avatar-05.png" alt="">
-                        <div class="memberInfo">
-                            <h3 class="memeberName">John Doe</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
-                        </div>
-                    </div>
-
-
-                    <div class="member">
-                        <img src="images/avatar-06.png" alt="">
+                        <img src="images/avatar-04.png" alt="" class="imgTeam">
                         <div class="memberInfo">
                             <h3 class="memeberName">John Doe</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
@@ -128,7 +112,7 @@
                     </div>
 
                     <div class="member">
-                        <img src="images/avatar-07.png" alt="">
+                        <img src="images/avatar-05.png" alt="" class="imgTeam">
                         <div class="memberInfo">
                             <h3 class="memeberName">John Doe</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
@@ -136,13 +120,100 @@
                     </div>
 
                     <div class="member">
-                        <img src="images/avatar-08.png" alt="">
+                        <img src="images/avatar-06.png" alt="" class="imgTeam">
                         <div class="memberInfo">
                             <h3 class="memeberName">John Doe</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
                         </div>
                     </div>
 
+                    <div class="member">
+                        <img src="images/avatar-07.png" alt="" class="imgTeam">
+                        <div class="memberInfo">
+                            <h3 class="memeberName">John Doe</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img src="images/avatar-08.png" alt="" class="imgTeam">
+                        <div class="memberInfo">
+                            <h3 class="memeberName">John Doe</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                        </div>
+                    </div>
+
+                    <div class="member" id="lastMember">
+                        <img src="images/avatar-05.png" alt="" class="imgTeam">
+                        <div class="memberInfo">
+                            <h3 class="memeberName">John Doe</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="statistics" id="statistics">
+        <div class="container">
+
+            <div class="header-container">
+                <h3 class="statistic-header"><label>O</label>ur <span><label>S</label>tatisitics</span></h3>
+            </div>
+
+            <div class="static-container">
+
+                <div class="client-value">
+                    <span class="client-number">
+                        0
+                    </span>
+                    <span class="client">Clients</span>
+                </div>
+
+                <div class="project-value"></div>
+
+                <div class="years-value"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="location">
+                    <ul class="location-point">
+                        <li><a href="#"><i class="fas fa-phone"></i>00 961 3 505050</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i>address - buldiing - 7<sup>th</sup> floor</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> mypage.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="social-media">
+                    <div class="som">
+                        <div><a href="#"><span><i class="fab fa-facebook-f"></i></span></a></div>
+                        <div><a href="#"><span><i class="fab fa-twitter"></i></span></a></div>
+                        <div><a href="#"><span><i class="fab fa-youtube"></i></span></a></div>
+                        <div><a href="#"><span><i class="fab fa-instagram"></i></span></a></div>
+                    </div>
+                </div>
+
+                <div class="footer-form">
+                    <form action="">
+                        <div class="email">
+                            <label for="">Email</label>
+                            <input type="text" placeholder="Enter Your Mail">
+                        </div>
+                        <div class="message">
+                            <label for="">Message</label>
+                            <input type="text" placeholder="Enter Your Message">
+                        </div>
+                        <div class="sub">
+                            <button>Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
