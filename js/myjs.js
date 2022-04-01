@@ -279,12 +279,19 @@ function scrollFunction() {
 
   if (document.documentElement.scrollTop > 1800) {
     let clientCounter = document.getElementsByClassName("client-number");
-
-    setInterval(function () {
-      if (clientCounter[0].textContent < 121)
-        clientCounter[0].textContent = parseInt(clientCounter[0].textContent) + 1;
-    }, 100);
+    functionTimerStatistic(clientCounter[0],121,0);
+    functionTimerStatistic(clientCounter[1],20,1);
+    functionTimerStatistic(clientCounter[2],70,1);
+  
+    let imgStat=document.querySelector(".satisfImg");
+    imgStat.style.right="10px";
+    imgStat.style.transition="5s";
+    imgStat.style.opacity="0.9";
   }
+
+  
+
+
 }
 
 //section below to make opposite of keyframe when hover image
@@ -302,3 +309,14 @@ teamImageArray.forEach(function (img, e) {
 
 
 
+function functionTimerStatistic(a,b,status) {
+  let stopTimer = setInterval(function () {
+    if (a.textContent == b && status==1){
+      a.innerHTML=a.innerHTML+"K";
+      clearInterval(stopTimer);
+    }
+ 
+    if (a.textContent < b)
+      a.textContent = parseInt(a.textContent) + 1;
+  }, 10)
+}

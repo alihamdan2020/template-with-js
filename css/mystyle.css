@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden
 }
 
 * {
@@ -15,6 +16,7 @@ html {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  ;
 }
 
 body {
@@ -77,6 +79,21 @@ ul {
   color: white;
 }
 
+/* design for words in .statistics */
+.design-stat{
+  font-size: 90px;
+  font-family: 'Send Flowers', cursive;
+  font-weight: bold;
+  color: #333;
+  border: 0px solid green;
+  opacity: 1;
+  position: absolute;
+  top:80px;
+  z-index: -1;
+}
+
+/* end */
+
 /* setting box */
 .setting-box {
   width: 250px;
@@ -105,7 +122,7 @@ z-index: 1;
 }
 
 .settings-div{
-  border:1px solid green;
+  border:0px solid green;
   text-align: center;
   background-color: #e6e6e6;
   width:90%;
@@ -668,9 +685,25 @@ and disable keyframe
 .statistics {
   padding-top: var(--padding);
   padding-bottom: var(--padding);
-  
+  position: relative;
 }
 
+.satisfImg {
+  position: absolute;
+  right:-600px;
+  width:35%;
+  top:25px;
+  opacity: 0;
+  
+}
+@media(max-width:768px){
+
+  .satisfImg {
+    width: 40%;
+
+  }
+  
+}
 .header-container {
   position: relative;
   border: 0px solid red;
@@ -703,24 +736,26 @@ and disable keyframe
 }
 
 .static-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  
 }
 
-.statistics .client-value {
+.statistics .box-value {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  border: 0px solid green;
 }
 
-.statistics .client-value .client-number {
-  font-size: 100px;
+.statistics .box-value .client-number {
+  font-size: 80px;
   letter-spacing: -10px;
-  color: #000;
+  color: var(--main-color);
   font-weight: bolder;
-  border: 5px solid var(--main-color);
+  /* border: 5px solid var(--main-color); */
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -729,12 +764,7 @@ and disable keyframe
   align-items: center;
 }
 
-.statistics .client-value .client {
-  font-weight: bold;
-  color: hsl(71, 68%, 61%);
-  font-size: 32px;
-  border: 0px solid green;
-}
+
 
 /* end statistics section */
 
@@ -826,23 +856,26 @@ div.som div span {
   margin-bottom: 2px;
 }
 .footer-form input{
-  padding:5px 5px;
+  padding:10px 5px;
   margin-bottom: 10px;
   caret-color: var(--main-color);
   border: 0px;
   outline: 0px;
-  width:100%
+  width:100%;
+  border-radius: 5px;
 }
 .footer-form input::placeholder{
   color: var(--main-color);
 }
 button{
   padding: 5px;
-  color:var(--main-color);
+  color:#fff;
   border-radius: 2px;
   border: 0px;
   outline: 0px;
-  background-color: #fff;
+  background-color:var(--main-color);
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 /*small screen*/
