@@ -303,6 +303,7 @@ padding-bottom: 10px;
     top:100%;
     padding-left: 0px;
     margin-left: 0px;
+	z-index:1000;
   }
 
   
@@ -358,6 +359,7 @@ padding-bottom: 10px;
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
+  
 }
 
 /* class below used in js file to apply when document is loaded to show landing text in fade in andfrom bottom to up */
