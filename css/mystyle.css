@@ -103,7 +103,6 @@ ul {
 	left:0;
 	opacity:1;
 	transition:1s;
-	border:1px solid green
 }
 .spinner i{
 	color:white;
@@ -721,7 +720,7 @@ and disable keyframe
 
   .satisfImg {
     width: 40%;
-
+right:0;
   }
   
 }

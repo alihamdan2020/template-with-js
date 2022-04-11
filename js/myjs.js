@@ -1,4 +1,5 @@
 //spinner
+
 let spin=document.getElementsByClassName("spinner");
 let main_to_show=document.getElementsByClassName("main-to-show");
 setTimeout(function() {
@@ -295,7 +296,7 @@ function scrollFunction() {
   
     let imgStat=document.querySelector(".satisfImg");
     imgStat.style.right="10px";
-    imgStat.style.transition="5s";
+    imgStat.style.transition="0.5s";
     imgStat.style.opacity="0.9";
   }
 
