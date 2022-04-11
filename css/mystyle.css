@@ -33,7 +33,7 @@ ul {
   list-style-type: none;
 }
 
-/* heaing above each block */
+/* heading above each block */
 .design {
   text-transform: uppercase;
   text-align: center;
@@ -93,7 +93,34 @@ ul {
 }
 
 /* end */
+/*spinner div*/
+.spinner{
+	height:100vh;
+	width:100%;
+	background-color:#1c1c1c;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:1;
+	transition:1s;
+	border:1px solid green
+}
+.spinner i{
+	color:white;
+	font-size:110px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	animation: rotation 1s infinite;
+	animation-timing-function:linear;
 
+}
+@keyframes rotation{
+	0% { transform: translate(-50%,-50%) rotate(0deg); }
+  100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+/*end*/
 /* setting box */
 .setting-box {
   width: 250px;

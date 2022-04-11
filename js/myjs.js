@@ -1,3 +1,13 @@
+//spinner
+let spin=document.getElementsByClassName("spinner");
+let main_to_show=document.getElementsByClassName("main-to-show");
+setTimeout(function() {
+	
+	spin[0].style.opacity="0";
+	main_to_show[0].style.display="block";
+},3000);
+
+
 //check local storage color-optin if it empty
 let localStorageColor = localStorage.getItem("color-option");
 if (localStorageColor != null)
